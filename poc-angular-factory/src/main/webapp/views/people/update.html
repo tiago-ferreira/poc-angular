@@ -1,0 +1,35 @@
+<div class="container">
+	<h1>Update people</h1>
+
+	<form id="formPeople">
+
+		<div class="control-group">
+			<label class="control-label" for="nome">Nome:</label>
+
+			<div class="controls">
+				<input type="text" id="nome" ng-model="people.nome"
+					placeholder="Nome" required /> <span ng-show="formPeople.$invalid">
+					Field ( Nome ) is Required. </span>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="email">Email:</label>
+
+			<div class="controls">
+				<input type="text" id="email" ng-model="people.email"
+					placeholder="Email" required /> <span
+					ng-show="formPeople.$invalid"> Field ( Email ) is Required.
+				</span>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<div class="controls">
+				<button ng-click="updatePeople()" class="btn btn-small btn-primary"
+					ng-disabled="formPeople.$invalid">save</button>
+				<button ng-click="cancel()" class="btn btn-small btn-primary">cancel</button>
+			</div>
+		</div>
+	</form>
+</div>
